@@ -1,0 +1,11 @@
+disk_path: .
+locked_period_day: 7
+match_express:
+- '[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$'
+normal_period_day: 30
+queue_size: 1000
+inode_usage_overflow_percent: 0.9
+disk_usage_overflow_percent: 0.9
+disk_usage_trigger_percent: 0.8
+inode_usage_trigger_percent: 0.8
+webhook:

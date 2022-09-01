@@ -1,0 +1,11 @@
+.idea/
+__pycache__/
+logs/disk_cleanup_debug.log*
+logs/disk_cleanup_error.log
+helper.py
+test.py
+.coverage
+performance_test
+logs/manager.log
+tests/test_disk_cleaner/
+integration_test

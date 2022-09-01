@@ -1,0 +1,50 @@
+version: 1
+
+formatters: 
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    #datfmt:
+    #style:
+    #validate:
+
+handlers:
+  debug_handler:
+    class : logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: simple
+    #filters:
+    filename: ./logs/disk_cleanup_debug.log
+    maxBytes: 1.e+6
+    backupCount: 5
+  error_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: simple
+    #filters:
+    filename: ./logs/disk_cleanup_error.log
+    maxBytes: 1.e+6
+    backupCount: 5
+  manager_handler:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: simple
+    #filters:
+    filename: ./logs/manager.log
+    maxBytes: 1.e+12
+    backupCount: 20
+
+
+  
+loggers:
+  __main__:
+    level: DEBUG
+    #propagate: 
+    #filters:
+    handlers: [debug_handler, error_handler]
+  thread:
+    level: DEBUG
+    handlers: [manager_handler]
+
+
+  
+

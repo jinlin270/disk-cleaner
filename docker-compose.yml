@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+#  install:
+#    image: dock
+#    command: python ./install.py
+  performance_test:
+    build: .
+    image: dock
+    command: python ./performance_test.py
+  onetime_main:
+    image: dock
+    command: python ./onetime_main.py
+
+
+
